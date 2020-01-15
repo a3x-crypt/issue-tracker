@@ -79,7 +79,27 @@ function (_React$Component3) {
   _createClass(IssueTable, [{
     key: "render",
     value: function render() {
-      return React.createElement("table", null, React.createElement("thead", null, React.createElement("tr", null, React.createElement("th", null, "ID"), React.createElement("th", null, "Title"))), React.createElement("tbody", null, React.createElement(IssueRow, null), React.createElement(IssueRow, null)));
+      var rowStyle = {
+        border: "1px solid silver",
+        padding: 4
+      };
+      return React.createElement("table", {
+        style: {
+          borderCollapse: "collapse"
+        }
+      }, React.createElement("thead", null, React.createElement("tr", null, React.createElement("th", {
+        style: rowStyle
+      }, "ID"), React.createElement("th", {
+        style: rowStyle
+      }, "Title"))), React.createElement("tbody", null, React.createElement(IssueRow, {
+        rowStyle: rowStyle,
+        issue_id: 1,
+        issue_title: "Error in console when clicking add"
+      }), React.createElement(IssueRow, {
+        rowStyle: rowStyle,
+        issue_id: 2,
+        issue_title: "Missing bottom border panel"
+      })));
     }
   }]);
 
